@@ -22,7 +22,7 @@ const menuItems: MenuItem[] = [
     description:
       "Rendang tradisional Perak yang dimasak perlahan selama 6 jam dengan rempah ratus asli.",
     price: "RM38",
-    image: "/images/menu/rendang.jpg",
+    image: "/images/menu/rendang.webp",
     category: "Hidangan Utama",
     isSignature: true,
   },
@@ -32,7 +32,7 @@ const menuItems: MenuItem[] = [
     description:
       "Ayam kampung dalam kuah santan pekat dengan cili api segar dari kebun sendiri.",
     price: "RM32",
-    image: "/images/menu/ayam-lemak.jpg",
+    image: "/images/menu/ayam-lemak.webp",
     category: "Hidangan Utama",
     isSignature: true,
   },
@@ -42,7 +42,7 @@ const menuItems: MenuItem[] = [
     description:
       "Ikan patin sungai dengan tempoyak asli Pahang — masam manis yang memukau.",
     price: "RM45",
-    image: "/images/menu/patin-tempoyak.jpg",
+    image: "/images/menu/patin-tempoyak.webp",
     category: "Hidangan Utama",
   },
   {
@@ -51,7 +51,7 @@ const menuItems: MenuItem[] = [
     description:
       "Nasi herba dengan 12 jenis ulam-ulaman segar, dimakan dengan sambal belacan.",
     price: "RM18",
-    image: "/images/menu/nasi-ulam.jpg",
+    image: "/images/menu/nasi-ulam.webp",
     category: "Nasi",
     isSignature: true,
   },
@@ -61,7 +61,7 @@ const menuItems: MenuItem[] = [
     description:
       "Sambal ikonik yang memulakan segalanya — pedas, rangup, dan ketagihan.",
     price: "RM15",
-    image: "/images/menu/sambal-nyet.jpg",
+    image: "/images/menu/sambal-nyet.webp",
     category: "Sambal & Lauk",
     isSignature: true,
   },
@@ -71,7 +71,7 @@ const menuItems: MenuItem[] = [
     description:
       "Mangga muda jeruk dengan kerisik, udang kering, dan daun kesum.",
     price: "RM16",
-    image: "/images/menu/kerabu.jpg",
+    image: "/images/menu/kerabu.webp",
     category: "Pembuka Selera",
   },
 ];

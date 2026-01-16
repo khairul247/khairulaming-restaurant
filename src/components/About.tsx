@@ -170,7 +170,7 @@ export default function About() {
             <div className="relative z-10">
               <div className="aspect-[4/5] overflow-hidden shadow-xl relative">
                 <Image
-                  src="/images/about-us.jpeg"
+                  src="/images/about-us.webp"
                   alt="Khairul Aming - Pengasas Rembayung"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

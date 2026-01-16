@@ -62,11 +62,11 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/80 to-transparent pt-8">
-      {/* Background Music */}
+      {/* Background Music - lazy loaded to improve page speed */}
       <audio
         ref={audioRef}
         src="/Noraniza Idris - Dikir Puteri.mp3"
-        preload="auto"
+        preload="none"
       />
 
       <div className="container-custom px-6">

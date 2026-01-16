@@ -395,7 +395,7 @@ export default function BookingForm() {
                     ref={videoRef}
                     className="absolute inset-0 w-full h-full object-cover cursor-pointer"
                     src="/rembayung-promo.mp4"
-                    poster="/images/black-texture.jpg"
+                    poster="/images/black-texture.webp"
                     preload="metadata"
                     autoPlay
                     loop
