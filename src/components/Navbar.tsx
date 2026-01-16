@@ -61,7 +61,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/80 to-transparent pt-8">
+    <nav className={`fixed top-0 left-0 right-0 z-50 pt-8 transition-colors duration-300 ${isMobileMenuOpen ? "bg-black/75" : "bg-gradient-to-b from-black/80 to-transparent"}`}>
       {/* Background Music - lazy loaded to improve page speed */}
       <audio
         ref={audioRef}
