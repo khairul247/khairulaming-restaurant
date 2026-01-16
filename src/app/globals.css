@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import "tailwindcss";
+
+/* ========================================
+   REMBAYUNG DESIGN SYSTEM
+   Kampung warmth meets modern elegance
+   ======================================== */
+
+/* Color Palette */
+:root {
+  /* Primary - Warm Terracotta */
+  --primary: #c4784a;
+  --primary-light: #d9956f;
+  --primary-dark: #a85e35;
+
+  /* Secondary - Deep Forest Green */
+  --secondary: #2d4739;
+  --secondary-light: #3d5f4d;
+  --secondary-dark: #1d2f25;
+
+  /* Accent - Warm Gold */
+  --accent: #d4a853;
+  --accent-light: #e5c47a;
+  --accent-dark: #b8923d;
+
+  /* Neutral - Warm Cream Tones */
+  --cream: #faf6f0;
+  --cream-dark: #ede6d9;
+  --charcoal: #2c2825;
+  --charcoal-light: #4a4541;
+
+  /* Background & Foreground */
+  --background: #faf6f0;
+  --foreground: #2c2825;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(250, 246, 240, 0.85);
+  --glass-border: rgba(212, 168, 83, 0.2);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(44, 40, 37, 0.08);
+  --shadow-md: 0 4px 16px rgba(44, 40, 37, 0.12);
+  --shadow-lg: 0 8px 32px rgba(44, 40, 37, 0.16);
+  --shadow-xl: 0 16px 48px rgba(44, 40, 37, 0.2);
+  --shadow-glow: 0 0 40px rgba(212, 168, 83, 0.3);
+}
+
+/* Dark mode overrides (optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1816;
+    --foreground: #faf6f0;
+    --glass-bg: rgba(26, 24, 22, 0.9);
+  }
+}
+
+/* Tailwind Theme Extension */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
+  --color-secondary-dark: var(--secondary-dark);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-dark: var(--accent-dark);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-light: var(--charcoal-light);
+
+  /* Typography */
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-body: "Montserrat", system-ui, sans-serif;
+  --font-script: "Allura", cursive;
+  --font-nav: "Yellowtail", cursive;
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Glassmorphism Card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+/* Premium Button */
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
+  color: white;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(
+    135deg,
+    var(--primary-light) 0%,
+    var(--primary) 100%
+  );
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--charcoal);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Background Pattern */
+.bg-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a853' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Gold Accent Line */
+.gold-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    var(--accent-light) 100%
+  );
+  border-radius: 2px;
+}
+
+/* Section Padding */
+.section-padding {
+  padding: 100px 24px;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 120px 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 140px 64px;
+  }
+}
+
+/* Container */
+.container-custom {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(212, 168, 83, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(212, 168, 83, 0.5);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Animation Delays */
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+.delay-300 {
+  animation-delay: 300ms;
+}
+.delay-400 {
+  animation-delay: 400ms;
+}
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* ========================================
+   FORM STYLES
+   ======================================== */
+
+.input-field {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid var(--cream-dark);
+  border-radius: 8px;
+  background: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(212, 168, 83, 0.15);
+}
+
+.input-field::placeholder {
+  color: var(--charcoal-light);
+  opacity: 0.6;
+}
+
+.label-text {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--charcoal);
+  font-size: 14px;
+}
+
+/* ========================================
+   CUSTOM SCROLLBAR
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+
+.hide-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hide-mobile {
+    display: block;
+  }
+
+  .hide-desktop {
+    display: none;
+  }
+}
