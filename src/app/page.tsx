@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import MenuPreview from "@/components/MenuPreview";
 import BookingForm from "@/components/BookingForm";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 // Dynamically import below-fold components for better initial load
 const Location = dynamic(() => import("@/components/Location"), {
@@ -24,15 +25,27 @@ const Footer = dynamic(() => import("@/components/Footer"), {
 
 export default function Home() {
   return (
-    <main>
+    <main id="main-content">
       <Navbar />
       <Hero />
-      <MenuPreview />
-      <BookingForm />
-      <About />
-      <Location />
-      <Gallery />
-      <Contact />
+      <ErrorBoundary>
+        <MenuPreview />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <BookingForm />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <About />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Location />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Gallery />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Contact />
+      </ErrorBoundary>
       <Footer />
     </main>
   );

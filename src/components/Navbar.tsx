@@ -85,10 +85,10 @@ export default function Navbar() {
               />
             </button>
 
-            {/* Music Mute/Unmute Button */}
+            {/* Music Mute/Unmute Button - 44x44px touch target for accessibility */}
             <button
               onClick={toggleMusic}
-              className="p-1 text-cream/80 hover:text-accent transition-colors duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+              className="p-3 -m-2 text-cream/80 hover:text-accent transition-colors duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
               aria-label={isMusicMuted ? "Play music" : "Mute music"}
               title={isMusicMuted ? "Play music" : "Mute music"}
             >
@@ -98,6 +98,7 @@ export default function Navbar() {
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -118,6 +119,7 @@ export default function Navbar() {
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -153,17 +155,19 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - 44x44px touch target for accessibility */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-cream"
+            className="md:hidden p-3 -m-1 text-cream"
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
           >
             <svg
               className="w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               {isMobileMenuOpen ? (
                 <path

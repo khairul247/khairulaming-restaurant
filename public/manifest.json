@@ -1,0 +1,25 @@
+{
+  "name": "Rembayung - Masakan Kampung Autentik",
+  "short_name": "Rembayung",
+  "description": "Restoran masakan kampung autentik oleh Khairul Aming di Kampung Baru, Kuala Lumpur",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1816",
+  "theme_color": "#1a1816",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "apple touch icon"
+    }
+  ],
+  "categories": ["food", "restaurant", "lifestyle"],
+  "lang": "ms"
+}
