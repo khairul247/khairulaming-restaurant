@@ -180,7 +180,7 @@ export default function Location() {
       <section
         ref={sectionRef}
         id="location"
-        className="relative section-padding bg-black"
+        className="relative section-padding bg-black scroll-mt-28"
       >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.08] pointer-events-none bg-pattern" />

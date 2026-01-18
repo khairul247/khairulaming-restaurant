@@ -249,7 +249,7 @@ export default function MenuPreview() {
     <section
       ref={sectionRef}
       id="menu"
-      className="relative section-padding bg-black overflow-hidden"
+      className="relative section-padding bg-black overflow-hidden scroll-mt-28"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.08] pointer-events-none bg-pattern" />

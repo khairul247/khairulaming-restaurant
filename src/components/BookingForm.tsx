@@ -365,7 +365,7 @@ export default function BookingForm() {
       <section
         ref={sectionRef}
         id="booking"
-        className="relative section-padding bg-black overflow-hidden"
+        className="relative section-padding bg-black overflow-hidden scroll-mt-28"
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-[0.08] pointer-events-none bg-pattern" />

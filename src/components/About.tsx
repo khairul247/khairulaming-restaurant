@@ -154,7 +154,7 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative section-padding bg-black"
+      className="relative section-padding bg-black scroll-mt-28"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.08] pointer-events-none bg-pattern" />
