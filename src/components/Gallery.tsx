@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useLayoutEffect, useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -237,6 +237,15 @@ export default function Gallery() {
 
     return () => ctx.revert();
   }, []);
+
+  // Refresh ScrollTrigger when category changes
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+
+    return () => clearTimeout(timeout);
+  }, [activeCategory]);
 
   const filteredImages =
     activeCategory === "all"
