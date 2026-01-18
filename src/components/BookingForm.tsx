@@ -379,7 +379,7 @@ export default function BookingForm() {
             {/* Content Side - Video */}
             <div
               ref={videoContainerRef}
-              className="flex items-center justify-center lg:justify-end"
+              className="flex items-center justify-center lg:justify-end order-2 lg:order-1"
             >
               {/* Video Placeholder (9:16 aspect ratio) */}
               <div className="relative w-full max-w-[478px] lg:h-full lg:max-h-[850px]">
@@ -478,7 +478,7 @@ export default function BookingForm() {
             </div>
 
             {/* Form Side */}
-            <div ref={formContainerRef} className="p-8">
+            <div ref={formContainerRef} className="p-8 order-1 lg:order-2">
               <h2
                 ref={titleRef}
                 className="text-3xl md:text-4xl font-bold text-cream mb-14"
