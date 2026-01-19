@@ -12,7 +12,7 @@ A modern, full-stack restaurant website built with Next.js 16 for **Rembayung** 
 - **Responsive Design** — Fully responsive layout optimized for all devices
 - **Smooth Animations** — GSAP ScrollTrigger and Framer Motion powered animations
 - **Online Booking System** — Interactive calendar with date/time selection and guest management
-- **Admin Dashboard** — Password-protected panel for managing reservations
+- **Admin Dashboard** — Password-protected panel for managing reservations 
 - **Google Sheets Integration** — Persistent booking storage via webhook
 - **Background Music** — Ambient Malay traditional music toggle
 - **Optimized Performance** — Dynamic imports, image optimization, and code splitting
@@ -111,10 +111,17 @@ All bookings are stored in Google Sheets via a webhook integration. See [ENV_SET
 
 ## Admin Panel
 
-Access the admin dashboard at `/admin`:
+Access the admin dashboard at `/admin`.
+
+**Default Credentials:**
+- **Password:** `rembayung2026`
+
+**Features:**
 - View all bookings with date filtering
 - Update booking status (Pending/Confirmed/Cancelled)
 - Secure token-based authentication
+
+> **Note:** Change the password in production by updating `ADMIN_PASSWORD` and `ADMIN_TOKEN` in your environment variables.
 
 ## Performance
 
