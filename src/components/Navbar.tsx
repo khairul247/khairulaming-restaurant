@@ -75,6 +75,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="cursor-pointer hover:opacity-80 transition-opacity duration-200"
             >
               <Image
                 src="/logo.svg"
