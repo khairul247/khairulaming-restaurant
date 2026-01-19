@@ -159,7 +159,7 @@ export default function Navbar() {
           {/* Mobile Menu Button - 44x44px touch target for accessibility */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-3 mr-2 text-cream"
+            className="md:hidden p-3 mr-2 text-cream hover:text-accent transition-colors duration-200"
             aria-label="Toggle menu"
             aria-expanded={isMobileMenuOpen}
           >
