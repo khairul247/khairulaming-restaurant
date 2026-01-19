@@ -490,6 +490,7 @@ export default function BookingForm() {
                 ref={formFieldsRef}
                 onSubmit={handleSubmit}
                 className="space-y-6"
+                autoComplete="off"
               >
                 {/* Date */}
                 <div className={`relative ${showCalendar ? "z-[100]" : ""}`}>
